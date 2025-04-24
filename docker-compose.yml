@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  asterisk:
+    build: .
+    container_name: asterisk 
+    ports:
+      - "8088:8088"
+    volumes:
+      - ./configs:/etc/asterisk
+    restart: unless-stopped
